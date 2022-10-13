@@ -129,6 +129,7 @@ Changes to be committed:
 Dropped refs/stash@{0} (eb7050cc0efd1952f1d22d30691d65fc86a6b3d3)
 PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git reset --hard
 HEAD is now at 9c3d7d3 adding about and home files
-PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> 
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions>
+
 ```
 
