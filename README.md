@@ -561,4 +561,99 @@ PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git pus
 Everything up-to-date
 PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> 
 ```
+### Exercice 2
+```bash
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git checkout -b ft/footer
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git add footer.tml
+fatal: pathspec 'footer.tml' did not match any files
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git add footer.html
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git commit -m "feat: adding initial commit on footer page"
+[ft/footer 16dc042] feat: adding initial commit on footer page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 footer.html
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git add footer.html
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git commit -m "feat: more content on footer page"
+[ft/footer a8dc320] feat: more content on footer page
+ 1 file changed, 3 insertions(+)
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git push
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use
+    git push --set-upstream origin ft/footer
+
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git push --set-upstream origin ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 785 bytes | 196.00 KiB/s, done.
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:
+To https://github.com/NNesta/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git merge --squash ft/footer
+Updating f9fc0e5..a8dc320
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+ create mode 100644 footer.html
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git commit -m "footer changes squashing"
+[ft/squashing 33df9d3] footer changes squashing
+ 1 file changed, 15 insertions(+)
+ create mode 100644 footer.html
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git log
+Author: Ngabonziza Nestor <ngabonest@gmail.com>
+Date:   Fri Oct 14 11:14:27 2022 +0200
+
+    footer changes squashing
+
+commit f9fc0e502e11fd208ed287c97364ca24835918a2 (origin/main, main)
+Author: Ngabonziza Nestor <ngabonest@gmail.com>
+Date:   Fri Oct 14 10:51:12 2022 +0200
+    feat: Updating README.md with bundle4 exercice1
+
+commit b8278a3ee3ad8592e657f49a7c8f6029536bb95b (git-copy/main)
+Author: Ngabonziza Nestor <ngabonest@gmail.com>
+Date:   Fri Oct 14 10:44:06 2022 +0200
+
+    feat: add changes on home page
+
+commit c14e4fff6ee651e4dfe27b58e85100badbe52484
+Author: Ngabonziza Nestor <ngabonest@gmail.com>
+Date:   Fri Oct 14 10:06:52 2022 +0200
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git push
+fatal: The current branch ft/squashing has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/squashing
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git push --set-upstream origin ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 492 bytes | 246.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/NNesta/Gym-Git-Exercise-Solutions/pull/new/ft/squashing
+remote:
+To https://github.com/NNesta/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions>
+```
 
