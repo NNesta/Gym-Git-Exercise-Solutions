@@ -656,4 +656,70 @@ To https://github.com/NNesta/Gym-Git-Exercise-Solutions.git
 branch 'ft/squashing' set up to track 'origin/ft/squashing'.
 PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions>
 ```
+## Bundle 5
+### Exercice 1
+```bash
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git add index.html
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git status      
+On branch main
+Your branch is up to date with 'origin/main'.
 
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    home.html
+
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git commit -m "feat: renaming home.html to index.html"
+[main 3b2741f] feat: renaming home.html to index.html
+ 1 file changed, 13 insertions(+)
+ create mode 100644 index.html
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 253 bytes | 253.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/NNesta/Gym-Git-Exercise-Solutions.git
+   42c4937..3b2741f  main -> main
+```
+Link:https://nnesta.github.io/Gym-Git-Exercise-Solutions/
+
+### Exercice2
+```bash
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> cd ..
+PS C:\Users\TheGym\Desktop\tutorial-projects> git clone https://github.com/NNesta/git-cafe-exercise.git
+Cloning into 'git-cafe-exercise'...
+remote: Enumerating objects: 107, done.
+remote: Counting objects: 100% (107/107), done.
+remote: Compressing objects: 100% (101/101), done.
+remote: Total 107 (delta 5), reused 104 (delta 4), pack-reused 0
+Receiving objects: 100% (107/107), 1.95 MiB | 1.60 MiB/s, done.
+Resolving deltas: 100% (5/5), done.
+PS C:\Users\TheGym\Desktop\tutorial-projects> cd .\git-cafe-exercise\
+PS C:\Users\TheGym\Desktop\tutorial-projects\git-cafe-exercise> code .
+PS C:\Users\TheGym\Desktop\tutorial-projects\git-cafe-exercise> 
+```
+### After forking
+```bash
+PS C:\Users\TheGym\Desktop\tutorial-projects\git-cafe-exercise> git add index.html
+PS C:\Users\TheGym\Desktop\tutorial-projects\git-cafe-exercise> git commit -m "feat: changing content of index.html"
+[main ea7153c] feat: changing content of index.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)     
+PS C:\Users\TheGym\Desktop\tutorial-projects\git-cafe-exercise> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 340 bytes | 170.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0        
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/NNesta/git-cafe-exercise.git
+   d1d3f9c..ea7153c  main -> main
+PS C:\Users\TheGym\Desktop\tutorial-projects\git-cafe-exercise> 
+```
